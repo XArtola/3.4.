@@ -98,11 +98,6 @@ public class Person{
 		return dni;
 
 	}
-
-	/**
-	 * 
-	 * @param height
-	 */
 	public void setHeight(int height) {
 
 		if (height > 30 && height < 220) {
