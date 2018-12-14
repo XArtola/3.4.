@@ -197,7 +197,7 @@ public class Agenda {
 		contacts = orderedList;
 
 	}
-
+	
 	private int findIndex(String toFind) {
 
 		boolean notFound = true;
