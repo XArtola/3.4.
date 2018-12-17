@@ -198,6 +198,29 @@ public class Agenda {
 
 	}
 	
+	
+	/**@author ik013043z1
+	 * 
+	 * @return ArrayList with the favorite contacts
+	 */
+	
+	public ArrayList<Contact> getFavorites() {
+		
+		ArrayList<Contact> favorites = new ArrayList<Contact>();
+		
+		for(int i = 0; i < contacts.size(); i++) {
+			
+			if (contacts.get(i).getFavorite())
+				
+				favorites.add(contacts.get(i));
+			
+		}
+		
+		return favorites;
+		
+	}
+	
+	
 	private int findIndex(String toFind) {
 
 		boolean notFound = true;

@@ -1,8 +1,7 @@
 package com.zubiri.agenda;
 
+import java.util.Calendar;
 import java.util.ArrayList;
-
-import javax.management.ConstructorParameters;
 
 /**
  * 
@@ -20,10 +19,12 @@ public class Contact {
 	private Person person1 = new Person("");
 	private String number = "";
 	private String address = "";
+	
+	private Calendar birthday;
 
 	private ArrayList<Note> notes = new ArrayList<Note>();
 	
-	private boolean favourite = false;
+	private boolean favorite = false;
 
 	public Contact(Person person1, String number, String address) {
 
@@ -80,17 +81,31 @@ public class Contact {
 
 	}
 	
-	public void setFavourite(boolean favourite) {
+	public void setFavourite(boolean favorite) {
 		
-		this.favourite = favourite;
+		this.favorite = favorite;
 		
 	}
 	
-	public boolean getFavourite() {
+	public boolean getFavorite() {
 		
-		return favourite;
+		return favorite;
 		
 	}
+	
+	public Calendar getBirthday() {
+		
+		return birthday;
+		
+		
+	}
+	
+	public void setBirthday(Calendar birthday) {
+		
+		this.birthday = birthday;
+		
+	}
+	
 	
 	/**@author ik013043z1
 	 * 

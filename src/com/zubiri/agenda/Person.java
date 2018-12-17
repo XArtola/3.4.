@@ -13,6 +13,7 @@ public class Person{
 
 	private String name = "";
 	private int age = 0;
+	
 	private int weight = 0;
 	private String dni = "";
 	private int height = 0;
