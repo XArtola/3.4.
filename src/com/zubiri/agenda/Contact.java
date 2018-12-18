@@ -1,6 +1,8 @@
 package com.zubiri.agenda;
 
 import java.util.Calendar;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 /**
@@ -15,7 +17,7 @@ import java.util.ArrayList;
  * 
  */
 public class Contact {
-
+	
 	private Person person1 = new Person("");
 	private String number = "";
 	private String address = "";
@@ -157,5 +159,32 @@ public class Contact {
 		return person1.toString() + " Number: " + number + " Address: " + address;
 
 	}
+	
+	/**@author ik013043z1
+	 * 
+	 * 
+	 * @return true if the computers date is the same as the birthday false if not
+	 */
+	
+
+	public boolean isBirthday() {
+		
+		boolean isBirthday = false;
+		
+		String today = new SimpleDateFormat("YYYY-MM-dd").format(new Date());
+		
+		String todaySplit[] = today.split("-");
+		
+		if(birthday.get(Calendar.DAY_OF_MONTH)==Integer.parseInt(todaySplit[2]))
+			
+			if(birthday.get(Calendar.MONTH) == Integer.parseInt(todaySplit[1]))
+				
+				isBirthday = true;
+		
+		return isBirthday;
+	
+			
+			
+	} 
 
 }

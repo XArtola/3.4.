@@ -32,24 +32,6 @@ public class mainInterface {
 		Agenda myAgenda = new Agenda();
 
 		int option = 0;
-		
-		System.out.println(new SimpleDateFormat("YYYY-MM-dd").format(new Date()));
-		
-		for(int i =0; i< myAgenda.size(); i++) {
-			
-			String today = new SimpleDateFormat("YYYY-MM-dd").format(new Date());
-			
-			
-			String todaySplit[] = today.split("-");
-			
-			if(myAgenda.getContact(i).getBirthday().get(Calendar.DAY_OF_MONTH)==Integer.parseInt(todaySplit[2]))
-				
-				if(myAgenda.getContact(i).getBirthday().get(Calendar.MONTH) == Integer.parseInt(todaySplit[1]))
-					
-					System.out.println("Today is " +myAgenda.getContact(i).getPerson().getName() + "´s birthday." + "He/she becomes "+ (Integer.parseInt(todaySplit[0])- myAgenda.getContact(i).getBirthday().get(Calendar.YEAR)));
-				
-				
-		} 
 
 		while (!finish) {
 
@@ -198,6 +180,12 @@ public class mainInterface {
 				birthday.set(sc.nextInt(), sc.nextInt(), sc.nextInt());
 				contact.setBirthday(birthday);
 				myAgenda.modifyContact(contact, myAgenda.findContact(contact.getPerson().getName()));
+				
+				if (contact.isBirthday())
+					
+					System.out.println("Today is "+ contact.getPerson().getName() + "´s birthday");
+				
+				break;
 
 			case 8:
 
